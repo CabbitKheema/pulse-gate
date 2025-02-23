@@ -2,20 +2,25 @@
   "name": "pulse-gate",
   "version": "0.0.0-development",
   "description": "Metronome but to lock function calls",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "tsc",
+    "test": "node dist/test/pulseGate.test.js",
     "semantic-release": "semantic-release"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": ["rate-limit", "pulse", "timing", "gate"],
+  "author": "cabbit-kheema",
+  "license": "MIT",
   "devDependencies": {
     "semantic-release": "^24.2.3",
     "typescript": "^5.7.3"
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "publishConfig": {
     "access": "public"
