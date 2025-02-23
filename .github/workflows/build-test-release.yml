@@ -19,10 +19,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-          cache: "npm"
       - run: npm ci
       - run: npm run build
-      - run: npm audit --audit-level=high
+      - run: npm audit signatures
       - name: Run tests
         run: npm test
 
@@ -36,11 +35,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-          registry-url: "https://registry.npmjs.org/"
-          cache: "npm"
       - run: npm ci
       - run: npm run build
-      - run: npm audit --audit-level=high
+      - run: npm audit signatures
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
