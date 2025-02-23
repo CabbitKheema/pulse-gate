@@ -1,0 +1,23 @@
+{
+  "name": "pulse-gate",
+  "version": "0.0.0-development",
+  "description": "Metronome but to lock function calls",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "semantic-release": "semantic-release"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "semantic-release": "^24.2.3",
+    "typescript": "^5.7.3"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
