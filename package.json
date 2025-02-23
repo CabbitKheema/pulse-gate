@@ -10,10 +10,16 @@
     "test": "node dist/test/pulseGate.test.js",
     "semantic-release": "semantic-release"
   },
-  "keywords": ["rate-limit", "pulse", "timing", "gate"],
+  "keywords": [
+    "rate-limit",
+    "pulse",
+    "timing",
+    "gate"
+  ],
   "author": "cabbit-kheema",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^22.13.5",
     "semantic-release": "^24.2.3",
     "typescript": "^5.7.3"
   },
