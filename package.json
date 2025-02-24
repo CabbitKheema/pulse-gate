@@ -7,7 +7,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "node dist/test/pulseGate.test.js",
+    "test": "node --no-warnings dist/test/pulseGate.test.js",
+    "prepublishOnly": "npm run build",
     "semantic-release": "semantic-release"
   },
   "keywords": [
@@ -18,6 +19,14 @@
   ],
   "author": "cabbit-kheema",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CabbitKheema/pulse-gate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CabbitKheema/pulse-gate/issues"
+  },
+  "homepage": "https://github.com/CabbitKheema/pulse-gate#readme",
   "devDependencies": {
     "@types/node": "^22.13.5",
     "semantic-release": "^24.2.3",

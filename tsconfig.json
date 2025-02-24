@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "ES2020",
+        "target": "ES2022",
         "module": "NodeNext",
         "outDir": "dist",
         "rootDir": ".",
@@ -9,6 +9,7 @@
         "skipLibCheck": true,
         "declaration": true,
         "moduleResolution": "nodenext",
+        "removeComments": true
     },
     "include": ["src", "test"],
     "exclude": ["node_modules", "dist"]
