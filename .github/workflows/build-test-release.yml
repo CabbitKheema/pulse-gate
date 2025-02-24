@@ -5,6 +5,9 @@ on:
     branches:
       - main
       - next
+  pull_request:
+    branches:
+      - next
 
 permissions:
   contents: read
@@ -19,6 +22,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
+      - uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - run: npm ci
       - run: npm run build
       - run: npm audit signatures
@@ -35,9 +44,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
+      - uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - run: npm ci
       - run: npm run build
       - run: npm audit signatures
+      - name: Authenticate NPM
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
