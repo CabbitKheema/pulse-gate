@@ -81,9 +81,26 @@ Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your Changes (`git commit -m 'feat(new thing): Added some AmazingFeature'`)
+   > Commit message format to be followed: [semantic-release | commit-message-format](https://semantic-release.gitbook.io/semantic-release#commit-message-format)
+   >
+   > ```text
+   >  <type>(<scope>): <short summary>
+   >  │       │             │
+   >  │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
+   >  │       │
+   >  │       └─⫸ Commit Scope: animations|bazel|benchpress|common|compiler|compiler-cli|core|
+   >  │                          elements|forms|http|language-service|localize|platform-browser|
+   >  │                          platform-browser-dynamic|platform-server|router|service-worker|
+   >  │                          upgrade|zone.js|packaging|changelog|docs-infra|migrations|
+   >  │                          devtools
+   >  │
+   >  └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
+   >```
+
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+5. Open a Pull Request 
+    > Please submit all pull requests to the `next` branch for review.
 
 ### **Top contributors:**
 
